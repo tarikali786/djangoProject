@@ -1,0 +1,26 @@
+{% extends 'main.html' %} {% block content %}
+<div>
+  <h2>
+    <a href="{% url 'form' %}">UserForm</a>
+  </h2>
+  <div>
+    {% for user in users %}
+    <div>
+      <label for="">Username:</label>
+      {{user.username}} <br />
+      <label for="">Age:</label>
+
+      {{user.age}} <br />
+      <label for="">Email:</label>
+
+      {{user.email_id}} <br />
+      <label for="">Address:</label>
+
+      {{user.address}}
+      <hr />
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}
